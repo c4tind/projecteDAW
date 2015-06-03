@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ArmyHammerProject.Models.Raça>
+
+@{
+    ViewBag.Title = "Tria una raça";
+}
+
+<h2>Tria una raça</h2>
+<h4>A partir de la raça que triïs podràs crear una llista</h4>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Informacio)
+        </th>
+        <th></th>
+    </tr>*@
+
+@foreach (var item in Model)
+{
+    <div class="col-sm-4">
+        <br />
+        <br />
+        <a href="https://localhost:44302">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    @Html.DisplayFor(modelItem => item.Nom)
+                </div>
+                <div class="panel-body">
+                    <img class="img-responsive img-circle" src="~/img/races/@(item.Nom).jpg" title="@Html.DisplayFor(modelItem => item.Informacio)">
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    @*<tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Informacio)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>*@
+}

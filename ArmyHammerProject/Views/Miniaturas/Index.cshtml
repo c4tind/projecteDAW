@@ -1,0 +1,142 @@
+﻿@model IEnumerable<ArmyHammerProject.Models.Miniatura>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Raça.Nom)>Raça</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Nom)>Nom</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Informacio)>Info</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Punts)>P</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.MidaMinima)>MM</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.TipusTropa)>TT</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Moviment)>M</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.HabilitatArmes)>HA</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.HabilitatProjectils)>HP</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Força)>F</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Resistencia)>R</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Ferides)>H</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Iniciativa)>I</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Atac)>A</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Lideratge)>L</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.SalvacioArmadura)>SA</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.SalvacioEspecial)>Esp</abbr>
+        </th>
+        <th>
+            <abbr title=@Html.DisplayNameFor(model => model.Regen)>Reg</abbr>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Raça.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Informacio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Punts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MidaMinima)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipusTropa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Moviment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HabilitatArmes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HabilitatProjectils)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Força)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resistencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ferides)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Iniciativa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Atac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lideratge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalvacioArmadura)
+        </td>
+        <td>
+            @if (item.SalvacioEspecial != null)
+            {
+                var sum = item.SalvacioEspecial.ToString() + "+"; 
+                @Html.DisplayFor(modelItem => sum) 
+            }
+            else { var guionet = "-"; @Html.DisplayFor(modelItem => guionet) }
+        </td>
+        <td>
+            @if (item.Regen != null)
+            { var sum = item.Regen.ToString() + "+"; @Html.DisplayFor(modelItem => sum)}
+            else { var guionet = "-"; @Html.DisplayFor(modelItem => guionet) }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
