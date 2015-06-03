@@ -1,0 +1,130 @@
+﻿@model ArmyHammerProject.Models.Objecte
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Objecte</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Moviment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Moviment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HabilitatArmes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HabilitatArmes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HabilitatProjectils)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HabilitatProjectils)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Força)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Força)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resistencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ferides)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ferides)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Iniciativa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Iniciativa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Atac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Atac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lideratge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lideratge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalvacioArmadura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalvacioArmadura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalvacioEspecial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalvacioEspecial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Regen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Regen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BonusTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BonusTotal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

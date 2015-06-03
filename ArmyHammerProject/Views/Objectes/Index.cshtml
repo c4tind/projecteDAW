@@ -1,0 +1,111 @@
+﻿@model IEnumerable<ArmyHammerProject.Models.Objecte>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Moviment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HabilitatArmes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HabilitatProjectils)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Força)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resistencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ferides)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Iniciativa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Atac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lideratge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalvacioArmadura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalvacioEspecial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Regen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BonusTotal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Moviment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HabilitatArmes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HabilitatProjectils)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Força)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resistencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ferides)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Iniciativa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Atac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lideratge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalvacioArmadura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalvacioEspecial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Regen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BonusTotal)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

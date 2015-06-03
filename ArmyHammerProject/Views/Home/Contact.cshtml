@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Contacte";
+}
+<h2>@ViewBag.Title</h2>
+<style type="text/css">
+    #map-canvas {
+        height: 500px;
+    }
+</style>
+
+<script type="text/javascript"
+        src="https://www.google.com/jsapi?autoload={'modules':[{name:'maps',version:3,other_params:''}]}"></script>
+<script type="text/javascript">
+    function init() {
+        var myLatlng = new google.maps.LatLng(42.2735569, 2.9647831);
+        var mapOptions = {
+            zoom: 16,
+            center: myLatlng
+        }
+        var image = "/img/mordorIcon.png";
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Mordor <|(O)|>',
+            icon: image
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', init);
+</script>
+<body>
+    <div id="map-canvas"></div>
+</body>
+<hgroup>
+    <h3>On som:</h3>
+</hgroup>
+<div>
+    <address>
+        Carrer Arquitecte Pelai Martínez, 1<br />
+        Figueres, Girona, Catalunya<br />
+        <abbr title="Telefon">Tel:</abbr>
+        972 50 66 21
+    </address>
+
+    <address>
+        <i class="icon-envelope"></i><strong>Email:</strong>   <a href="mailto:admin@armyhammer.com">admin@armyhammer.com</a><br />
+    </address>
+</div>
